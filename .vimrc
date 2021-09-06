@@ -14,6 +14,4 @@ source $HOME/.vim/config/theme.vim
 
 " Plugins config vim:
 source $HOME/.vim/config/plugins/which-key.vim
-
-" Snippets
-source $HOME/.vim/snippets/c.vim
+source $HOME/.vim/config/plugins/snippets.vim

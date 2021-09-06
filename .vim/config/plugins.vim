@@ -8,12 +8,12 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " auto-install vim-plug
-if empty(glob('~/.config/nvim-plug/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
-call plug#begin('~/.config/nvim-plug/autoload/plugged')
+call plug#begin('~/.vim/autoload/plugged')
 
 " Better Syntax Support
 Plug 'sheerun/vim-polyglot'
@@ -27,5 +27,9 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'liuchengxu/vim-which-key'
 " goyo
 Plug 'junegunn/goyo.vim'
+" Track the engine.
+Plug 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
 
 call plug#end()
