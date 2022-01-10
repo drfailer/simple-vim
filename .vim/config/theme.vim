@@ -47,6 +47,7 @@ set background=dark
 let g:gruvbox_italicize_strings=1
 let g:gruvbox_italic=1
 let g:gruvbox_improved_warnings=1
+let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
 " hi Normal guibg=none
 
@@ -55,8 +56,8 @@ colorscheme gruvbox
 " Status Line:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Gruvbox colors
-au InsertEnter * hi statusline cterm=NONE guibg=black guifg=#fe8019 ctermfg=black ctermbg=darkmagenta
-au InsertLeave * hi statusline cterm=NONE guibg=black guifg=#928374 ctermfg=black ctermbg=darkblue
+au InsertEnter * hi statusline cterm=NONE guifg=black guibg=#fe8019 ctermfg=black ctermbg=darkmagenta
+au InsertLeave * hi statusline cterm=NONE guifg=black guibg=#928374 ctermfg=black ctermbg=darkblue
 hi statusline guifg=black guibg=#928374 ctermbg=black ctermfg=darkblue
 hi User1 cterm=NONE ctermfg=250 ctermbg=239 guifg=#ebdbb2 guibg=#504945
 hi User2 cterm=NONE ctermfg=250 ctermbg=236 guifg=#bdae93 guibg=#3c3836

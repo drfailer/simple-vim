@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/local.isima.fr/rechassagn1/TP/c-avance/tp-calcul-matrice/Exercice3/C3'
+let g:netrw_dirhist_2='/home/local.isima.fr/rechassagn1/TP/c-avance/tp-calcul-matrice/Exercice4'
+let g:netrw_dirhist_3='/home/local.isima.fr/rechassagn1/TP/c-avance/tp-calcul-matrice/Exercice3/C3'
+let g:netrw_dirhist_4='/home/local.isima.fr/rechassagn1/TP/c-avance/C4'
+let g:netrw_dirhist_5='/home/local.isima.fr/rechassagn1/TP/c-avance/flood_it'

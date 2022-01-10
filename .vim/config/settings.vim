@@ -41,14 +41,18 @@ set nowritebackup             " This is recommended by coc
 set noswapfile
 set updatetime=300            " Faster completion
 set timeoutlen=500            " By default timeoutlen is 1000 ms
-set clipboard=unnamedplus     " Copy paste between vim and everything else
+" set clipboard=unnamedplus     " Copy paste between vim and everything else
 set nohlsearch                " Don't highlight when searching
 set incsearch                 " Highlight when typing researche
 set path+=**
 set wildmode=longest,list,full
+set wildmenu
 set colorcolumn=80            " columns indicator
 set signcolumn=yes
 " set scrolloff=5              " To keep 5 lines between the cursor and the bottom of the screen
+
+" remove netrw banner:
+let g:netrw_banner=0
 
 " Fix filetype
 autocmd BufRead,BufNewFile *.tex set filetype=tex
@@ -56,7 +60,6 @@ autocmd BufRead,BufNewFile *.pde set filetype=java
 autocmd BufRead,BufNewFile *.todo set filetype=markdown
 autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
 autocmd BufRead,BufNewFile xmobar* set filetype=haskell
-autocmd BufRead,BufNewFile ~/.config/qutebrowser/config.py :LspStop
 
 " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 au! BufWritePost $MYVIMRC source %
@@ -77,6 +80,7 @@ augroup END
 " folding:
 augroup REMEMBER_FOLDS
   autocmd!
-  autocmd BufWritePre * mkview
+  " autocmd BufWritePre * mkview
   autocmd BufWinEnter * silent! loadview
 augroup END
+set foldmethod=marker
