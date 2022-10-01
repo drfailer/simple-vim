@@ -1,14 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"       ███████╗███████╗████████╗████████╗██╗███╗   ██╗ ██████╗ ███████╗      "
-"       ██╔════╝██╔════╝╚══██╔══╝╚══██╔══╝██║████╗  ██║██╔════╝ ██╔════╝      "
-"       ███████╗█████╗     ██║      ██║   ██║██╔██╗ ██║██║  ███╗███████╗      "
-"       ╚════██║██╔══╝     ██║      ██║   ██║██║╚██╗██║██║   ██║╚════██║      "
-"       ███████║███████╗   ██║      ██║   ██║██║ ╚████║╚██████╔╝███████║      "
-"       ╚══════╝╚══════╝   ╚═╝      ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝      "
+" settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" set leader key
-let g:mapleader = "\<Space>"
 
 syntax enable                 " Enables syntax highlighing
 set exrc                      " Automatically source vimrc in projects directories
@@ -60,27 +52,3 @@ autocmd BufRead,BufNewFile *.pde set filetype=java
 autocmd BufRead,BufNewFile *.todo set filetype=markdown
 autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
 autocmd BufRead,BufNewFile xmobar* set filetype=haskell
-
-" auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-au! BufWritePost $MYVIMRC source %
-
-" removing whitespaces
-fun! TrimWhitespaces()
-  let l:save = winsaveview()
-  keeppatterns %s/\s\+$//e
-  call winrestview(l:save)
-endfun
-
-augroup UTILS
-  autocmd!
-  autocmd BufWritePre * :call TrimWhitespaces()
-augroup END
-
-
-" folding:
-augroup REMEMBER_FOLDS
-  autocmd!
-  " autocmd BufWritePre * mkview
-  autocmd BufWinEnter * silent! loadview
-augroup END
-set foldmethod=marker
