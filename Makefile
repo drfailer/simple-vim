@@ -1,4 +1,4 @@
 config:
-	rm ~/.vimrc
-	rm -r ~/.vim
-	mv .vim* ~
+	rm -rf ~/.vimrc
+	rm -rf ~/.vim
+	mv .vim* ~/
