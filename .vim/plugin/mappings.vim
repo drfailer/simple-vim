@@ -8,20 +8,21 @@ let g:mapleader = "\<Space>"
 " Force saving
 cmap w!! w !sudo tee %
 
-" Better nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
-
 " Use alt + hjkl to resize windows
 nnoremap <M-j>    :resize -2<CR>
 nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
-" Ib hate escape more than anything else
 " inoremap jk <Esc>
 inoremap kj <Esc>
 inoremap kl <Esc>la
+
+" fix J
+nnoremap J mzJ'z
+
+" no copy after paste in visual mode
+xnoremap <leader>p "_dP
 
 " Easy CAPS
 inoremap <c-u> <ESC>viwUea
@@ -32,16 +33,11 @@ nnoremap <Leader>bp :bprevious<CR>
 
 " navigate threw tabs:
 nnoremap <Leader>tn :tabnew<CR>
-nnoremap <Leader>nt :tabnext<CR>
-nnoremap <Leader>tp :tabprevious<CR>
-nnoremap <Leader>tc :tabclose<CR>
+nnoremap <Leader>> :tabnext<CR>
+nnoremap <Leader>< :tabprevious<CR>
 
-" Use control-c instead of escape
-nnoremap <C-c> <Esc>
-
-" Better tabbing
-vnoremap < <gv
-vnoremap > >gv
+" add line bellow in insert mode (old emacs stuff habit)
+inoremap <C-o> <CR><Esc>kA
 
 " Better window navigation
 nnoremap <C-h> <C-w>h
@@ -52,6 +48,10 @@ nnoremap <C-l> <C-w>l
 " moving lines:
 nnoremap <up> :move -2<cr>
 nnoremap <down> :move +1<cr>
+vnoremap K :m '<-2<CR>gv=gv<cr>
+vnoremap J :m '>+1<CR>gv=gv<cr>
+vnoremap < <gv
+vnoremap > >gv
 
 " jump points:
 inoremap ,<tab> <Esc>/<++><Enter>"_c4l
@@ -99,7 +99,7 @@ nmap <leader>gc :G commit<cr>
 nmap <leader>gp :G push<cr>
 
 " FZF
-nnoremap <leader>f :Files<cr>
+nnoremap <leader>ff :Files<cr>
 nnoremap <leader>vrc :Files ~/.vim<cr>
 nnoremap <leader>fg :Rg<cr>
 nnoremap <leader>fb :Buffers<cr>

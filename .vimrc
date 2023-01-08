@@ -20,11 +20,8 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 
 " Theme
-Plug 'tomasr/molokai'
+Plug 'gruvbox-community/gruvbox'
 Plug 'itchyny/lightline.vim'
-
-" Which key
-" Plug 'liuchengxu/vim-which-key'
 
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
