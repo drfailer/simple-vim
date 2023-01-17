@@ -48,8 +48,8 @@ nnoremap <C-l> <C-w>l
 " moving lines:
 nnoremap <up> :move -2<cr>
 nnoremap <down> :move +1<cr>
-vnoremap K :m '<-2<CR>gv=gv<cr>
-vnoremap J :m '>+1<CR>gv=gv<cr>
+vnoremap K :m -2<CR>gv=gv
+vnoremap J :m +1<CR>gv=gv
 vnoremap < <gv
 vnoremap > >gv
 
