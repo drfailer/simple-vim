@@ -187,8 +187,10 @@ gnb() {
   if [ $# -eq 1 ]; then
     # track remote branch if exists
     if [ ! -z $(git branch -r | grep $1) ]; then
+      echo "git branch --track $1 origin/$1"
       git branch --track $1 origin/$1
     else
+      echo "git branch $1"
       git branch $1
     fi
   else
