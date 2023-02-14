@@ -27,6 +27,11 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
 
+" snippets
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+
 call plug#end()
 
 " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
@@ -52,6 +57,9 @@ augroup REMEMBER_FOLDS
   autocmd BufWinEnter * silent! loadview
 augroup END
 set foldmethod=marker
+
+" fix snipmate warning
+let g:snipMate = { 'snippet_version' : 1 }
 
 " some bashrc stuff
 " export   PS1='\[\e[0;1;95m\]\W \[\e[0;1;94m\]$\[\e[0m\] '
