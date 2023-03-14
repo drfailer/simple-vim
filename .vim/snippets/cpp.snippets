@@ -1,4 +1,4 @@
-xtends c
+extends c
 ##### main
 snippet mainargs
 	int main(int argc, char **argv)
@@ -19,6 +19,12 @@ snippet io
 # std
 snippet string
 	#include <string>$0
+# iterator
+snippet iter
+	#include <iterator>$0
+# algorithm
+snippet alg
+	#include <algorithm>$0
 ##### function
 # cout
 snippet cout
@@ -48,3 +54,9 @@ snippet class
 			$1() = default;
 			~$1() = default;
 	};
+##### functions
+snippet copy
+	std::copy(${1:begin}, ${2:end}, ${3:iter_dest});$0
+##### iterator
+snippet ossit
+	std::ostream_iterator<${1:type}>(std::cout, "\n");$0
