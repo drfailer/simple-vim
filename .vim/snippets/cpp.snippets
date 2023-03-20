@@ -37,8 +37,8 @@ snippet endl
 	std::endl$0
 ##### headerfiles and preprocessor
 snippet guard
-	#ifndef __`toupper(expand('%:r'))`__
-	#define __`toupper(expand('%:r'))`__
+	#ifndef `toupper(expand('%:r'))`
+	#define `toupper(expand('%:r'))`
 
 	$0
 
@@ -60,3 +60,10 @@ snippet copy
 ##### iterator
 snippet ossit
 	std::ostream_iterator<${1:type}>(std::cout, "\n");$0
+##### operator
+# <<
+snippet operator<<
+	std::ostream& operator<<(std::ostream& os, const ${1:Objet}& ${2:object}) {
+		$0
+		return os;
+	}

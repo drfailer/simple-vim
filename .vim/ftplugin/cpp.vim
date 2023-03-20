@@ -2,9 +2,9 @@
 nnoremap <buffer> <leader>F :%!clang-format --style=Mozilla<cr>
 
 " generate method
-nnoremap <C-m> mz^"myt;?^class<CR>w"cyiw/^#endif<CR>O<Esc>O<C-r>m<Esc>0d^f(bi<C-r>c::<Esc>o{<CR>}<Esc>=ip`z
-nnoremap <leader>lgg mz"vyiw^"tyt<Space>?^class<CR>/{<CR>%O<C-r>t<Space><C-r>c::get!<C-r>v()<Space>{<CR>return<Space><C-r>v;<CR>}<Esc>?!<CR>xvU=ip`z
-nnoremap <leader>lgs mz"vyiw^"tyt<Space>?^class<CR>/{<CR>%Ovoid<Space><C-r>c::set!<C-r>v(<C-r>t<Space><C-r>v)<Space>{<CR>this-><C-r>v<Space>=<Space><C-r>v;<CR>}<Esc>?!<CR>xvU=ip`z
+nnoremap <C-m> mz^"myt;?^class<CR>w"cyiw/^#endif<CR>O<Esc>O<C-r>m<Esc>0d^f(Bi<C-r>c::<Esc>o{<CR>}<Esc>=ip`z
+nnoremap <leader>lgg mz"vyiw^"tyt<Space>?^class<CR>/public:<CR>o<C-r>t<Space>get!<C-r>v()<Space>const<Space>{<CR>return<Space><C-r>v;<CR>}<CR><Esc>?!<CR>xvU=ip`z
+nnoremap <leader>lgs mz"vyiw^"tyt<Space>?^class<CR>/public:<CR>ovoid<Space>set!<C-r>v(<C-r>t<Space><C-r>v)<Space>{<CR>this-><C-r>v<Space>=<Space><C-r>v;<CR>}<CR><Esc>?!<CR>xvU=ip`z
 " nnoremap <leader>lgg mz"vyiw^"tyt<Space>?^class<CR>w"cyiw/^#endif<CR>O<Esc>O<C-r>t<Space><C-r>c::get!<C-r>v()<Esc>o{<CR>return<Space><C-r>v;<CR>}<Esc>?!<CR>xvU=ip`z
 " nnoremap <leader>lgs mz"vyiw^"tyt<Space>?^class<CR>w"cyiw/^#endif<CR>O<Esc>Ovoid<Space><C-r>c::set!<C-r>v(<C-r>t<Space><C-r>v)<Esc>o{<CR>this-><C-r>v<Space>=<Space><C-r>v;<CR>}<Esc>?!<CR>xvU=ip`z
 
