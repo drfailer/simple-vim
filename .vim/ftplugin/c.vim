@@ -1,8 +1,7 @@
 " Formatting code command
 nnoremap <buffer> <leader>F :%!clang-format --style=Mozilla<cr>
 
-
-" snippets
+" snippets{{{
 " loops:
 " inoremap ,if<tab> if<Space>()<Space>{<CR>/*<space>do<space>*/<CR>}<Esc>kk0f)i
 " inoremap ,while<tab> while<Space>()<Space>{<CR>/*<space>do<space>*/<CR>}<Esc>kk0f)i
@@ -22,4 +21,4 @@ nnoremap <buffer> <leader>F :%!clang-format --style=Mozilla<cr>
 " inoremap ,pf<tab> printf("\n");<Esc>0f"a
 " inoremap ,sf<tab> scanf("");<Esc>0f"a
 " " stdlib function :
-" inoremap ,x<tab> exit(0);
+" inoremap ,x<tab> exit(0);}}}

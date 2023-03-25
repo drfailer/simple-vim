@@ -8,7 +8,7 @@ nnoremap <leader>lgs mz"vyiw^"tyt<Space>?^class<CR>/public:<CR>ovoid<Space>set!<
 " nnoremap <leader>lgg mz"vyiw^"tyt<Space>?^class<CR>w"cyiw/^#endif<CR>O<Esc>O<C-r>t<Space><C-r>c::get!<C-r>v()<Esc>o{<CR>return<Space><C-r>v;<CR>}<Esc>?!<CR>xvU=ip`z
 " nnoremap <leader>lgs mz"vyiw^"tyt<Space>?^class<CR>w"cyiw/^#endif<CR>O<Esc>Ovoid<Space><C-r>c::set!<C-r>v(<C-r>t<Space><C-r>v)<Esc>o{<CR>this-><C-r>v<Space>=<Space><C-r>v;<CR>}<Esc>?!<CR>xvU=ip`z
 
-" " snippets
+" " snippets{{{
 " " loops:
 " inoremap ,if<tab> if<Space>()<Space>{<CR>/*<space>do<space>*/<CR>}<Esc>kk0f)i
 " inoremap ,while<tab> while<Space>()<Space>{<CR>/*<space>do<space>*/<CR>}<Esc>kk0f)i
@@ -29,7 +29,7 @@ nnoremap <leader>lgs mz"vyiw^"tyt<Space>?^class<CR>/public:<CR>ovoid<Space>set!<
 " inoremap ,co<tab> std::cout<Space><<<Space>;<Left>
 " inoremap ,sf<tab> std::cin<Space>>><Space>;<Left>
 " " stdlib function :
-" inoremap ,x<tab> exit(0);
+" inoremap ,x<tab> exit(0);}}}
 
 " abrev
 ab cout std::cout

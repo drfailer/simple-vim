@@ -28,13 +28,13 @@ xnoremap <leader>p "_dP
 inoremap <c-u> <ESC>viwUea
 
 " navigate threw buffers:
-nnoremap <Leader>nb :bnext<CR>
-nnoremap <Leader>bp :bprevious<CR>
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprevious<CR>
 
 " navigate threw tabs:
 nnoremap <Leader>tn :tabnew<CR>
-nnoremap <Leader>> :tabnext<CR>
-nnoremap <Leader>< :tabprevious<CR>
+nnoremap <M-n> :tabnext<CR>
+nnoremap <M-p> :tabprevious<CR>
 
 " add line bellow in insert mode (old emacs stuff habit)
 inoremap <C-o> <CR><Esc>kA
@@ -64,8 +64,8 @@ nnoremap <leader>* :%s/\<<C-r><C-w>\>//g<Left><Left>
 " Quickfix list:
 nnoremap <leader>qo :copen<CR>
 nnoremap <leader>qc :cclose<CR>
-nnoremap <C-p> :previous<CR>
-nnoremap <C-n> :cnext<CR>
+nnoremap <leader>qp :previous<CR>
+nnoremap <leader>qn :cnext<CR>
 
 " change dictionary:
 map <F6> :setlocal spell! spelllang=fr,cjk<cr>
@@ -94,7 +94,7 @@ nnoremap <leader>vt :vertical terminal<CR>
 " fugitive
 nmap <leader>gj :diffget //3<cr>
 nmap <leader>gf :diffget //2<cr>
-nmap <leader>gs :G<cr>
+nmap <leader>gg :G<cr>
 nmap <leader>gc :G commit<cr>
 nmap <leader>gp :G push<cr>
 
@@ -106,7 +106,6 @@ nnoremap <leader>fb :Buffers<cr>
 
 " Formatting code command
 autocmd FileType haskell nnoremap <buffer> <leader>F :%!hindent<cr>
-autocmd FileType c nnoremap <buffer> <leader>F :%!clang-format --style=Mozilla<cr>
 
 " Compile command
 autocmd FileType haskell nnoremap <buffer> <leader>B :%!runghc %<cr>
