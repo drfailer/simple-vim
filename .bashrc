@@ -170,11 +170,14 @@ alias ccc='gcc -Wall -Wextra -o'
 alias gitlogpretty='git log --graph --pretty="%C(yellow) Hash: %h %C(blue)Date: %ad %C(red) Message: %s " --date=human'
 alias gitlogprettysoprettynotliketheo='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
+# launch tmux with the right colors
+alias tm='TERM="xterm-256color" tmux'
+
 ################################################################################
 #                                   git                                        #
 ################################################################################
 alias g='git'
-alias gS='git status'
+alias gs='git status'
 alias ga='git add -A'
 alias gc='git commit -m '
 alias gca='git commit --amend -m '
@@ -182,6 +185,7 @@ alias gm='git merge '
 alias gb='git branch '
 alias gba='git branch -a'
 alias gck='git checkout '
+alias gst='git stash'
 
 # git new branch
 gnb() {
