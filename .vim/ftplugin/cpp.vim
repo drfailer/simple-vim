@@ -1,5 +1,5 @@
 " Formatting code command
-nnoremap <buffer> <leader>F :%!clang-format --style=Mozilla<cr>
+nnoremap <buffer> <leader>lF :%!clang-format --style=Mozilla<cr>
 
 " generate method
 nnoremap <C-m> mz^"myt;?^class<CR>w"cyiw/^#endif<CR>O<Esc>O<C-r>m<Esc>0d^f(Bi<C-r>c::<Esc>o{<CR>}<Esc>=ip`z
